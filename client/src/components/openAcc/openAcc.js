@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-
+import SignUp from './clientSignup'
 
 class OpenAcc extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div>
-
+        <SignUp />
       </div>
     )
   }

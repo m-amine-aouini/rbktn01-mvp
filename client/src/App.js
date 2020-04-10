@@ -15,7 +15,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/">
-            {/* <OpenAcc /> */}
+            <OpenAcc />
           </Route>
           <Route path="/about">
             <div>
