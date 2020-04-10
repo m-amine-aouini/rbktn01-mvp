@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { signUp } from './../../services/Acc'
-class SignUp extends Component {
+class SellerSignUp extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -33,8 +33,9 @@ class SignUp extends Component {
       if (this.state.gender === "") alert('Choose your gender !')
       if (this.state.firstname === '' || this.state.lastname === "") alert('Your lastname or firstname is empty !')
     } else {
-      signUp(this.state);
+
       console.log(this.state)
+      signUp(this.state);
     }
   }
 
@@ -73,4 +74,4 @@ class SignUp extends Component {
     )
   }
 }
-export default SignUp;
+export default SellerSignUp;

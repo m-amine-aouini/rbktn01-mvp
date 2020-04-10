@@ -14,16 +14,16 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/">
-            <OpenAcc />
+          <Route exact path="/">
+            <div>users</div>
           </Route>
-          <Route path="/about">
+          <Route exact path="/about">
             <div>
               about
             </div>
           </Route>
-          <Route path="/users">
-            <div>users</div>
+          <Route exact path="/seller">
+            <OpenAcc />
 
           </Route>
         </Switch>
