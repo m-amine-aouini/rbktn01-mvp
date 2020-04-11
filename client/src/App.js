@@ -18,7 +18,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/">
-            <div>products for sale</div>
+            <div><Link to="/accessAcc">Open seller acount</Link></div>
           </Route>
           <Route exact path="/myProducts">
             {!sessionStorage.getItem('_id') ? <OpenAcc /> : <SellerProducts />}
