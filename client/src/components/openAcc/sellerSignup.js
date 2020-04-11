@@ -18,18 +18,18 @@ class SellerSignUp extends Component {
 
   onSubmit(e) {
     e.preventDefault()
-    let emailValidation = /@./
+    let checkEmail = /@./
 
     if (this.state.firstname === '' ||
       this.state.lastname === '' ||
       this.state.password.length < 8 ||
-      !emailValidation.test(this.state.email) ||
+      !checkEmail.test(this.state.email) ||
       this.state.gender === '') {
       if (this.state.password < 8) {
         if (this.state.password.length === 0) alert('Your password input is empty')
         else alert('Your password is too short !')
       }
-      if (!emailValidation.test(this.state.email)) alert('Your Email is not real !')
+      if (!checkEmail.test(this.state.email)) alert('Your Email is not real !')
       if (this.state.gender === "") alert('Choose your gender !')
       if (this.state.firstname === '' || this.state.lastname === "") alert('Your lastname or firstname is empty !')
     } else {

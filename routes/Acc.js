@@ -4,7 +4,7 @@ const Seller = mongoose.model('Seller');
 module.exports = (app) => {
 
   app.post('/signup/seller', async (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
     let newSeller = new Seller(req.body)
     newSeller.save();
     res.send({ results: req.body });
