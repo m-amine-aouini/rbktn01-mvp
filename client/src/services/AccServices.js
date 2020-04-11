@@ -6,7 +6,7 @@ module.exports = {
       .then(res => {
         console.log(res)
       })
-      .catch(err => console.log(err))
+      .catch(err => { throw err })
   },
   signIn: async (data) => {
     axios.post('http://localhost:1019/signin/seller', data)
@@ -17,6 +17,6 @@ module.exports = {
         sessionStorage.setItem('_id', id);
 
       })
-      .catch(err => console.log(err))
+      .catch(err => { throw err })
   }
 }

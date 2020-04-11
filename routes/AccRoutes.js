@@ -21,11 +21,11 @@ module.exports = (app) => {
         res.send({ results: seller._id });
         res.end();
       } else {
-        res.status(501).send({ results: "Password is wrong you might wrote it wrong" })
+        res.status(401).send({ results: "Password is wrong you might wrote it wrong" })
       }
 
     } else {
-      res.state(404).send({ results: "Account is not found" })
+      res.status(404).send({ results: "Account is not found" })
     }
   })
 }
