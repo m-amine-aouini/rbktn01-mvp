@@ -21,7 +21,7 @@ db.once('open', () => console.log('mongoose connected'));
 
 require('./models/seller');
 
-require('./routes/Acc')(app);
+require('./routes/AccRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));

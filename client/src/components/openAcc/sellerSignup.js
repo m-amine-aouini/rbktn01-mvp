@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { signUp } from './../../services/Acc'
+import { signUp } from './../../services/AccServices'
 class SellerSignUp extends Component {
   constructor(props) {
     super(props)
@@ -47,6 +47,7 @@ class SellerSignUp extends Component {
   render() {
     return (
       <div>
+        <h1>Sign Up</h1>
         <form>
           <label for="fname">First name:</label>
           <input type="text" id="fname" name="firstname" onChange={e => this.on_change(e)} ></input><br></br>
