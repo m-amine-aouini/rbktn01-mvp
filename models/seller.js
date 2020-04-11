@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose
+
 const sellerSchema = new Schema({
   firstname: String,
   lastname: String,

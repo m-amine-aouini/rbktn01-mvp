@@ -20,6 +20,7 @@ db.on('error', (err) => console.log(err));
 db.once('open', () => console.log('mongoose connected'));
 
 require('./models/seller');
+require('./models/product');
 
 require('./routes/AccRoutes')(app);
 
