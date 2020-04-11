@@ -3,6 +3,9 @@ import SellerSignUp from './sellerSignup'
 import SellerSignin from './sellerSignin';
 import { Redirect } from 'react-router-dom'
 class OpenAcc extends Component {
+  constructor(props) {
+    super(props)
+  }
   render() {
     return (
 
@@ -11,7 +14,7 @@ class OpenAcc extends Component {
           <SellerSignUp />
         </div>
         <div className="enterInput" id="Ssignin">
-          <SellerSignin />
+          <SellerSignin logIn={this.props.logIn} />
         </div>
 
       </div>

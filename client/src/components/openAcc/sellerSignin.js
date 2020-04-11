@@ -26,7 +26,9 @@ class SellerSignin extends Component {
       if (this.state.password.length < 8) alert('the password the you wrote is bellow 8 characters')
 
     } else {
-      signIn(this.state);
+      signIn(this.state, this.props.logIn)
+
+
       console.log(this.state)
     }
   }
