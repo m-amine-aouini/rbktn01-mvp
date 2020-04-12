@@ -13,7 +13,7 @@ module.exports = {
       .then(res => {
         console.log(res)
         let id = res.data.results;
-        sessionStorage.setItem('_id', id);
+        localStorage.setItem('_id', id);
 
 
       })

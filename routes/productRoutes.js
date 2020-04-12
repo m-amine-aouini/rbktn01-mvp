@@ -8,4 +8,13 @@ module.exports = (app) => {
     res.send({ results: 'handled post product request' });
     res.end();
   })
+
+  app.get('/sellerProducts/:seller_id', async (req, res) => {
+    let { seller_id } = req.params;
+    Product.find({ seller_id }, async (err, results) => {
+      if (err) throw err;
+      res.send({ results });
+      res.end();
+    })
+  })
 }

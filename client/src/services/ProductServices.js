@@ -8,5 +8,15 @@ module.exports = {
         onMade()
       })
       .catch(err => console.log(err))
+  },
+
+  sellerProds: async (id, extractProds) => {
+    axios.get(`http://localhost:1019/sellerProducts/${id}`)
+      .then(res => {
+        console.log(res)
+        let { results } = res.data;
+        extractProds(results);
+      })
+      .catch(err => console.log(err))
   }
 }

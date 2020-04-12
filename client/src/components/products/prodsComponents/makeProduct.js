@@ -34,7 +34,7 @@ class MakeP extends Component {
             let { title, description, imageURL, cost, county } = this.state;
 
             let product = { title, description, imageURL, cost, county };
-            product.seller_id = sessionStorage.get
+            product.seller_id = localStorage.getItem('_id')
             postProd(product, this.madeProduct.bind(this));
         }
     }
