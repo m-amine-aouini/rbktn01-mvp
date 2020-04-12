@@ -17,4 +17,12 @@ module.exports = (app) => {
       res.end();
     })
   })
+
+  app.get('/allProducts', async (req, res) => {
+    Product.find({}, async (err, results) => {
+      if (err) throw err;
+      res.send({ results });
+      res.end();
+    })
+  })
 }

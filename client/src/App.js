@@ -32,7 +32,7 @@ class App extends Component {
         <div className="App">
           <Switch>
             <Route exact path="/">
-              <div><Link to="/accessAcc">Open seller acount</Link></div>
+
             </Route>
             <Route exact path="/myProducts">
               {!this.state.loggedIn ? (<OpenAcc logIn={this.logIn.bind(this)} />) : (<SellerProducts />)}

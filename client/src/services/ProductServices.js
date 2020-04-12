@@ -18,5 +18,13 @@ module.exports = {
         extractProds(results);
       })
       .catch(err => console.log(err))
+  },
+
+  allProds: async (data, extractProds) => {
+    axios.get(`http://localhost:1019/allProducts`)
+      .then(res => {
+        console.log(res)
+      })
+      .catch(err => console.log(err))
   }
 }
