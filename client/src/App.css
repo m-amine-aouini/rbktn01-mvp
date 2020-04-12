@@ -18,3 +18,14 @@
 .SProdsImages {
   width: 200px;
 }
+
+#allProds {
+  display: grid;
+  grid-template-columns: 210px 210px 210px 210px;
+  grid-gap: 15px;
+  margin-left: 243px;
+}
+
+.AllProdsImages {
+  width: 200px;
+}

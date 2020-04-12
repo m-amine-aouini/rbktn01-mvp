@@ -4,26 +4,25 @@ module.exports = {
   postProd: async (data, onMade) => {
     axios.post('http://localhost:1019/postProduct', data)
       .then(res => {
-        console.log(res)
         onMade()
       })
       .catch(err => console.log(err))
   },
 
-  sellerProds: async (id, extractProds) => {
+  sellerProds: async (id, extractSellerProds) => {
     axios.get(`http://localhost:1019/sellerProducts/${id}`)
       .then(res => {
-        console.log(res)
         let { results } = res.data;
-        extractProds(results);
+        extractSellerProds(results);
       })
       .catch(err => console.log(err))
   },
 
-  allProds: async (data, extractProds) => {
+  allProds: async (extractAllProds) => {
     axios.get(`http://localhost:1019/allProducts`)
       .then(res => {
-        console.log(res)
+        let { results } = res.data;
+        extractAllProds(results);
       })
       .catch(err => console.log(err))
   }

@@ -11,7 +11,7 @@ import {
 import OpenAcc from './components/openAcc/openAcc';
 import SellerProducts from './components/products/Products';
 import MakeP from './components/products/prodsComponents/makeProduct';
-
+import Home from './components/home/home';
 class App extends Component {
   constructor(props) {
     super(props)
@@ -32,7 +32,7 @@ class App extends Component {
         <div className="App">
           <Switch>
             <Route exact path="/">
-
+              <Home />
             </Route>
             <Route exact path="/myProducts">
               {!this.state.loggedIn ? (<OpenAcc logIn={this.logIn.bind(this)} />) : (<SellerProducts />)}
