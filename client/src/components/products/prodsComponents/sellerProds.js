@@ -12,14 +12,22 @@ class SellerProducts extends Component {
     this.setState({ products: data })
   }
 
-  componentDidMount() {
+  componentWillMount() {
     sellerProds(localStorage.getItem('_id'), this.sellerProds.bind(this));
   }
 
   render() {
     return (
       <div id="sellerProds">
-
+        {
+          this.state.products.map((product, i) => (
+            <div className="prods" key={i}>
+              <img src={product.imageURL} className="SProdsImages"></img>
+              <h5>{product.title}</h5>
+              <p>{product.description}</p>
+            </div>
+          ))
+        }
       </div>
     )
   }

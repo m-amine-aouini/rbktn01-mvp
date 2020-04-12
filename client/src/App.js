@@ -22,7 +22,11 @@ class App extends Component {
   logIn() {
     this.setState({ loggedIn: true });
   }
+  componentWillMount() {
+    if (!!localStorage.getItem('_id')) { this.setState({ loggedIn: true }) }
+  }
   render() {
+
     return (
       <Router>
         <div className="App">
