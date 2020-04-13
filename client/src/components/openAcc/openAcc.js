@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SellerSignUp from './sellerSignup'
+import SellerSignUp from './sellerSignup';
 import SellerSignin from './sellerSignin';
 import { Redirect } from 'react-router-dom'
 class OpenAcc extends Component {

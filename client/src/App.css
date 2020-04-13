@@ -19,13 +19,20 @@
   width: 200px;
 }
 
+
 #allProds {
   display: grid;
   grid-template-columns: 210px 210px 210px 210px;
+  grid-auto-rows: 260px;
   grid-gap: 15px;
   margin-left: 243px;
 }
 
+.prods{
+  background-color: #d6d2c7;
+
+}
 .AllProdsImages {
   width: 200px;
+
 }

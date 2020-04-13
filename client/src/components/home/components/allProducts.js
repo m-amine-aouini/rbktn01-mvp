@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { allProds } from './../../../services/ProductServices';
+import productServices from './../../../services/ProductServices';
 class AllProds extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +13,7 @@ class AllProds extends Component {
   }
 
   componentWillMount() {
-    allProds(this.retreiveAllProds.bind(this));
+    productServices.allProds(this.retreiveAllProds.bind(this));
   }
 
 
@@ -23,9 +23,12 @@ class AllProds extends Component {
         {
           this.state.allProducts.map((product, i) => (
             <div class="prods" key={i}>
-              <img src={product.imageURL} className="AllProdsImages"></img>
-              <h5>{product.title}</h5>
-              <p>{product.description}</p>
+              <div className="styleProds">
+                <img src={product.imageURL} className="AllProdsImages"></img>
+                <h4>{product.cost} DT</h4>
+                <h5>{product.title}</h5>
+                <p>{product.description}</p>
+              </div>
             </div>
           ))
         }

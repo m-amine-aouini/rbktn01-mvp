@@ -22,9 +22,12 @@ class SellerProducts extends Component {
         {
           this.state.products.map((product, i) => (
             <div className="prods" key={i}>
-              <img src={product.imageURL} className="SProdsImages"></img>
-              <h5>{product.title}</h5>
-              <p>{product.description}</p>
+              <div className="styleProds">
+                <img src={product.imageURL} className="SProdsImages"></img>
+                <h4>{product.cost} DT</h4>
+                <h5>{product.title}</h5>
+                <p>{product.description}</p>
+              </div>
             </div>
           ))
         }
