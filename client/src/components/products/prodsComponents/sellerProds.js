@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { sellerProds } from './../../../services/ProductServices'
+import productServices from './../../../services/ProductServices'
 class SellerProducts extends Component {
   constructor(props) {
     super(props)
@@ -13,7 +13,7 @@ class SellerProducts extends Component {
   }
 
   componentWillMount() {
-    sellerProds(localStorage.getItem('_id'), this.sellerProds.bind(this));
+    productServices.sellerProds(localStorage.getItem('_id'), this.sellerProds.bind(this));
   }
 
   render() {

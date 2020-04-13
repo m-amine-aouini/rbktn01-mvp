@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { signIn } from './../../services/AccServices'
+import authServices from './../../services/AccServices'
 class SellerSignin extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +26,7 @@ class SellerSignin extends Component {
       if (this.state.password.length < 8) alert('the password the you wrote is bellow 8 characters')
 
     } else {
-      signIn(this.state, this.props.logIn)
+      authServices.signIn(this.state, this.props.logIn)
 
 
       console.log(this.state)

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { postProd } from './../../../services/ProductServices';
+import productServices from './../../../services/ProductServices';
 import { Redirect } from 'react-router-dom';
 
 class MakeP extends Component {
@@ -35,7 +35,7 @@ class MakeP extends Component {
 
             let product = { title, description, imageURL, cost, county };
             product.seller_id = localStorage.getItem('_id')
-            postProd(product, this.madeProduct.bind(this));
+            productServices.postProd(product, this.madeProduct.bind(this));
         }
     }
     madeProduct() {

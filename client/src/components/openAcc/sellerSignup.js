@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { signUp } from './../../services/AccServices'
+import authServices from './../../services/AccServices'
 class SellerSignUp extends Component {
   constructor(props) {
     super(props)
@@ -35,7 +35,7 @@ class SellerSignUp extends Component {
     } else {
 
       console.log(this.state)
-      signUp(this.state);
+      authServices.signUp(this.state);
     }
   }
 

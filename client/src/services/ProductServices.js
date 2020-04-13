@@ -1,8 +1,9 @@
 let axios = require('axios');
 
-module.exports = {
+export default {
   postProd: async (data, onMade) => {
-    axios.post('http://localhost:1019/postProduct', data)
+    // axios.post('http://localhost:1019/postProduct', data)
+      axios.post('/postProduct', data)
       .then(res => {
         onMade()
       })
@@ -10,7 +11,8 @@ module.exports = {
   },
 
   sellerProds: async (id, extractSellerProds) => {
-    axios.get(`http://localhost:1019/sellerProducts/${id}`)
+    // axios.get(`http://localhost:1019/sellerProducts/${id}`)
+      axios.get(`/sellerProducts/${id}`)
       .then(res => {
         let { results } = res.data;
         extractSellerProds(results);
@@ -19,7 +21,8 @@ module.exports = {
   },
 
   allProds: async (extractAllProds) => {
-    axios.get(`http://localhost:1019/allProducts`)
+    // axios.get(`http://localhost:1019/allProducts`)
+      axios.get(`/allProducts`)
       .then(res => {
         let { results } = res.data;
         extractAllProds(results);
