@@ -35,6 +35,6 @@ if (process.env.NODE_ENV === 'production') {
 
 }
 
-let port = 1019;
+let port = process.env.PORT || 1019;
 
 app.listen(port, () => console.log('Server connected on port: ' + port))
