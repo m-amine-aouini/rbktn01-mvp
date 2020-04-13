@@ -11,7 +11,7 @@ require('dotenv').config();
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost:27017/rbktn_mvp', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_DB || 'mongodb://localhost:27017/rbktn_mvp', { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set('useCreateIndex', true);
 
 let db = mongoose.connection
