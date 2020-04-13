@@ -1,3 +1,4 @@
+require('dotenv').config();
 let express = require('express');
 let app = express();
 let bodyParser = require('body-parser');
@@ -7,7 +8,6 @@ let cors = require('cors');
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-require('dotenv').config();
 
 mongoose.Promise = global.Promise;
 
