@@ -19,7 +19,7 @@ class AllProds extends Component {
 
   render() {
     return (
-      <div id="allProds">
+      <div className="displayProds" id="allProds">
         {
           this.state.allProducts.map((product, i) => (
             <div class="prods" key={i}>

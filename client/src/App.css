@@ -8,11 +8,12 @@
   grid-template-columns: 50% 50%;
 }
 
-#sellerProds{
+.displayProds{
   display: grid;
   grid-template-columns: 210px 210px 210px 210px;
   grid-gap: 15px;
   margin-left: 243px;
+  margin-top: 10px;
 }
 
 .SProdsImages {
@@ -20,17 +21,27 @@
 }
 
 
-#allProds {
+/* #allProds {
   display: grid;
   grid-template-columns: 210px 210px 210px 210px;
   grid-auto-rows: 260px;
   grid-gap: 15px;
+  margin-top: 10px;
   margin-left: 243px;
-}
+
+} */
 
 .prods{
-  background-color: #d6d2c7;
 
+  background-color: #f2f0eb;
+  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+
+}
+
+.styleProds {
+  margin-top: 6px;
 }
 .AllProdsImages {
   width: 200px;
